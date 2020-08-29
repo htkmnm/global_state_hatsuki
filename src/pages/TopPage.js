@@ -12,6 +12,7 @@ const TopPage = () => {
                 data: res.data
             })
         })
+        // eslint-disable-next-line
     }, [])
     console.log(globalState)
     return (

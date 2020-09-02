@@ -1,8 +1,9 @@
-import React, { useEffect, useContext } from 'react'
-import { fetchGetData } from '../apis/index'
-import { Store } from '../store/index'
-import { GET_DATA } from '../actions/index'
-import Card from '../components/Card'
+import React, { useEffect, useContext } from 'react';
+import { fetchGetData } from '../apis/index';
+import { Store } from '../store/index';
+import { GET_DATA } from '../actions/index';
+import Card from '../components/Card';
+
 const TopPage = () => {
     const { globalState, setGlobalState } = useContext(Store)
     useEffect(() => {
@@ -10,10 +11,10 @@ const TopPage = () => {
             setGlobalState({
                 type: GET_DATA,
                 data: res.data
-            })
-        })
+            });
+        });
         // eslint-disable-next-line
-    }, [])
+    }, []);
     console.log(globalState)
     return (
         <div style={{ display: 'flex', flexWrap: 'wrap' }}>
@@ -25,6 +26,7 @@ const TopPage = () => {
                 })
             }
         </div>
-    )
-}
+    );
+};
+
 export default TopPage;

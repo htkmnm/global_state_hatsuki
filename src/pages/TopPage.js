@@ -15,16 +15,16 @@ const TopPage = () => {
         });
         // eslint-disable-next-line
     }, []);
-    console.log(globalState)
+    console.log(globalState);
     return (
         <div style={{ display: 'flex', flexWrap: 'wrap' }}>
             {
                 globalState.user_data.map((user, index) => {
                     return (
                         <Card user={user} key={index} />
-                    )
+                    );
                 })
-            }
+            };
         </div>
     );
 };

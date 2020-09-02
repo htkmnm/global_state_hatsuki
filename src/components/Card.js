@@ -48,4 +48,4 @@ export default function SimpleCard({ user }) {
             </CardContent>
         </Card>
     );
-}
+};
